@@ -1,0 +1,34 @@
+  a:not(.navbar) {
+    text-decoration: none;
+    color: #ddd;
+  }
+  a:not(.navbar):hover {
+      color:white;
+  }
+
+  .game-title {
+      margin-bottom: 15px;
+      margin-top: 15px;
+  }
+
+  .row {
+      margin-bottom:15px;
+  }
+
+  .description > a, .description > a:hover {
+    color: #bf2113;
+  }
+
+  .description > a:hover {
+    opacity:0.9;
+  }
+
+  h4 {
+    font-family: var(--title);
+    font-size: 1.3em;
+  }
+
+  .kit-links {
+      text-align:left;
+      font-size:0.9em;
+  }

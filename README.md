@@ -1,0 +1,3 @@
+#BoardGameCompendium
+
+BoardGameCompendium est un site dédié aux contenus custom pour jeux de société modulaires. Il offre un système de filtres permettant de trouver facilement le contenu correspondant à votre groupe de jeu et à vos attentes en terme de difficulté, durée, etc.. tout en prenant en compte le matériel dont vous disposez. Un flux RSS permet de suivre les ajouts et une communauté Discord permet d'interagir avec les autres joueurs et de proposer vos créations.

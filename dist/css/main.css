@@ -1,0 +1,266 @@
+:root {
+  /*
+  COLORS
+  */
+  
+  /* Backgrounds */
+  --background: #1e1e1e;
+  --dark-footer: #1f1f1f;
+  --light-footer: #242424;
+  
+  /* Elements & Fonts */
+  --fanmade: #2abe74;
+  --orange: #faa61a;
+  --dark-orange: #ed9e19;
+  --campaign: #1e1e1e;
+  --mid-grey: #a1a1a1;
+  --dark-grey: #333333;
+  --red: #dc353b;
+
+  /*
+  FONTS
+  */
+  --title: 'Righteous', "Verdana", cursive;
+  --accentuated:'Oswald', "Verdana", sans-serif;
+  --text:'Roboto Condensed', "Arial", sans-serif;
+}
+
+/* CORPS DU SITE */
+a{
+  text-decoration: none;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-size:1.2vh;  
+  background-color: var(--background);  
+}
+
+.description {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:1.8em;
+  text-align:center;
+  color:white;
+}
+.description-xl{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:2.2em;
+  text-align:center;
+  color:white;
+}
+
+/* BARRE DE NAVIGATION */
+.big-category {
+  margin:auto;
+  max-height:20vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.category {
+  margin:auto;
+  max-height:15vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.subcategory {
+  margin:auto;
+  max-height:10vh;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.nav-link.active:hover {
+  opacity:1;
+}
+.dropdown-item:active {
+    background-color: #1e1e1e!important ;
+}
+.dropdown-item:hover {
+    background-color: #1e1e1e!important ;
+    opacity: 0.8;
+}
+.dropdown-item.active:hover {
+  opacity:1;
+}
+/* PIED DE PAGE */
+.footer{
+	background-color: var(--light-footer);
+  padding-top: 15px;
+  padding-bottom: 0;
+  margin-top: 10vh;
+  border-top: #111;
+  box-shadow: 1px 1px 6px #222;
+}
+.footer-col ul{
+  padding-left:0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 60px;
+   
+  font-size: 1.8em;
+}
+.footer-col h4{
+	font-size: 1em;
+	color: #ffffff;
+	text-transform: capitalize;
+  font-family: 'Oswald', sans-serif;
+	margin-bottom: 25px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+  background-color: #bf2113;
+	left:0;
+	bottom: -10px;
+	height: 2px;
+	box-sizing: border-box;
+	width: 60px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 5px;
+}
+.footer-col ul {
+  margin-bottom:0;
+}
+.footer-col ul li a{
+	font-size: 0.85em;
+  font-family: 'Roboto Condensed', sans-serif;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+.footer .container{
+  margin-bottom:10px;
+}
+
+.copyright {
+  background-color: var(--dark-footer);
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  font-weight:300;
+  font-size: 1.8em;
+}
+
+/*RESPONSIVE*/
+
+/*Desktop design*/
+@media(max-width: 574px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+/* design pour téléphone - sm et moins */
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+  }
+}
+
+
+#intro {
+  font-family: var(--accentuated);
+  font-size: 2.6em;
+  color: white;
+  opacity:0.9;
+  max-width:90%;
+  margin:auto;
+  margin-top:2vw;
+  margin-bottom:2vw;
+}
+
+#intro > a, #intro > a:hover {
+  color: #bf2113;
+  text-decoration: none;
+}
+
+#intro > a:hover {
+  opacity: 0.9;
+}
+
+#intro > a:active {
+  opacity: 1;
+}
+
+/*
+  ***** NAVBAR *****
+*/
+
+/*.footer {
+  text-align:center;
+  height:8vh;
+  background-color:#333333!important;
+  border-top:1px solid #222222;
+  color: #a3a3a3;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2em;
+  margin:0;
+  padding:0;
+}*/
+
+li:focus, button:focus, a:focus
+{
+  outline:0;
+}
+
+.grid {padding: 16px;
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-gap: 16px;
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+}
+
+/* Style de scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF;
+  padding: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca2b0;
+}
+
+.lightbox::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.lightbox::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .3);
+}

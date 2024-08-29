@@ -1,0 +1,489 @@
+.bg-exclusive{
+  background-color: #367BEF;
+}
+.bg-campaign{
+  background-color: var(--dark-grey);
+  color:var(--title-color);
+}
+.bg-fanmade{
+  background-color: #16CF8A;
+}
+.bg-official{
+  background-color: #e43f32;
+}
+
+/********************************
+******* MOTEUR DE RECHERCHE *****
+********************************/
+
+/*******************************************
+*******************SLIDERS*****************
+************************************************/
+::selection{
+  color: white;
+  background: var(--orange);
+}
+.slider{
+  height: 5px;
+  margin-top:5px;
+  position: relative;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.4);
+}
+.slider .progress{
+  height: 100%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  border-radius: 5px;
+  background: var(--orange);
+}
+.range-input{
+  position: relative;
+}
+.range-input input{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  height: 15px;
+  width: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--orange);
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+input[type="range"]:active::-webkit-slider-thumb{
+  background: var(--dark-orange);
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+input[type="range"]::-moz-range-thumb{
+  height: 15px;
+  width: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--orange);
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+input[type="range"]:active::-moz-range-thumb{
+  height: 15px;
+  width: 15px;
+  background: var(--orange);
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+.search-hint{
+  font-family: var(--title);
+  font-size:  2em;
+  color: white;
+}
+
+
+
+
+
+
+
+#search-engine {
+  background:var(--theme-color);
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-bottom: solid 1px white;
+}
+
+#banner {
+  max-width: 100%;
+  max-height: 30vh;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+li.search_field.selected {
+  background:var(--theme-color);
+  color: var(--form-font-color);
+}
+
+ul.search_array {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid var(--form-border-color);
+  background:white;
+  width: 95%;
+  margin:auto;
+}
+
+li.search_field {
+  margin:0;
+  padding-left: 5px;
+  padding-right:5px;
+  font-family: 'Verdana';
+  font-size: 1.6em;
+  border:1px solid white;
+}
+
+.search_field.last > li {
+  border-bottom: 1px solid var(--form-border-color);
+}
+
+a.box-choice,
+a.players-choice,
+a.difficulty-choice,
+a.length-choice {
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+}
+
+
+.hint{
+  display: flex;
+  justify-content: center;
+}
+
+.search-title.filters{
+  margin-left:1em;
+}
+
+#boxes{  
+  margin-left: 2.5%;
+}
+
+h3.search-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 0;
+  font-family: var(--title);
+  font-size: 2.6em;
+  color: var(--form-font-color);
+}
+.form-check-input{
+  margin-left:0 !important;
+  vertical-align:middle;
+  border-color: rgba(0, 0, 0, 0.25);
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+}
+.form-switch .form-check-input:focus {  
+  vertical-align:middle;
+  border-color: rgba(0, 0, 0, 0.25);
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+}
+.form-switch .form-check-input:checked {
+  background-color: var(--switch-color);
+  border-color:  var(--switch-color);  
+  vertical-align:middle;
+  border: none;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
+label.filter-check {
+  vertical-align:middle;
+  font-family: var(--title);
+  color: var(--form-font-color);
+}
+
+.filter-check {
+  margin:0;
+  padding:0;
+  vertical-align:middle;
+}
+
+
+/********************************
+******** Desktop design *********
+********************************/
+
+ @media(min-width: 1464px){
+  label.filter-check {    
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+
+  .form-check-input{  
+    margin-bottom: 2px;
+  }
+}
+ /* design pour téléphone - sm et moins */
+@media(max-width: 991px){
+  label.filter-check {    
+    font-size: 2.5vw;
+  }
+}
+
+
+
+
+.unselected-view{
+  font-size: 48px;
+  color:var(--dark-orange)
+}
+.selected-view{
+  border-radius:5px;
+  background-color:white;
+  font-size: 48px;
+  color:var(--dark-orange);
+}
+
+/********************************
+*********** MISSIONS ************
+********************************/
+
+/*********** Badges ************/
+.badge-success {
+  color: white;
+  background-color: var(--fanmade);
+}
+
+a.mission-link, a:hover.mission-link, a:visited.mission-link {
+  text-decoration: none;
+}
+
+a:hover.mission-link {
+  opacity: 0.9;
+}
+
+#missions-list .badges{
+  display:flex;
+  align-items:center;
+  flex-wrap:nowrap;
+  width: max-content;
+  margin:0;
+}
+
+#missions-list .badge {
+  font-size: 1em;
+  margin:0 2px 0 2px;
+}
+
+#missions-list .badge-first {
+  margin:0 2px 0 0;
+}
+
+#missions-list .badge-last {
+  margin:0 0 0 2px;
+}
+
+.mission-count-div {
+  text-align:center;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+#mission-count {
+  font-family: var(--title);
+  font-size: 3.2em;
+  color: var(--orange);
+}
+
+#right-character {
+  z-index:-2;
+  position:fixed;
+  right:0;
+  bottom:-70px;
+  max-width:15vw;
+  background-color: var(--background);
+}
+
+#left-character {
+  z-index:-2;
+  position:fixed;
+  left:0;
+  bottom:-70px;
+  max-width:15vw;
+  background-color: var(--background);
+}
+
+#missions-grid .author {
+  width: 100%;
+  font-size: 1.4em;
+}
+#missions-list .author {
+  font-size: 1.4em;
+}
+.author.fanmade{
+  color: var(--fanmade);
+}
+.author.official{
+  color: var(--orange);
+}
+.author {  
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  font-family: 'Verdana';
+  margin:0;
+  padding:4px;
+  display:inline-block;
+  justify-content: center;
+}
+
+/*
+**  MISSION STYLES
+*/
+
+#missions-grid .mission {
+  margin-bottom:30px;
+  position:relative;
+}
+
+#missions-list .mission-item {
+  margin-bottom:3px;
+  border-radius:5px;
+  background-color:var(--orange);
+  padding:3px
+}
+
+#missions-grid .mission-thumbnail{
+  min-height:20vh;
+}
+.mission-thumbnail {
+  width:100%;  
+  box-shadow: 1px 1px 12px black;
+}
+
+#missions-list .mission-thumbnail{
+  margin-top: 2px;
+}
+
+.certified {
+  position:absolute;
+  top:5px;
+  padding-right:24px;
+  width:100%
+}
+
+#missions-grid .mission > a {
+  color:var(--title-color);
+}
+
+#missions-grid h3.mission-title {
+  font-family: var(--title);
+  text-align: center;
+  font-size: 2.8em;
+  color: var(--title-color);
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+
+
+
+#missions-list h3.mission-item-title {
+  color:white;
+  max-width:100%;
+  font-family: var(--title);
+  font-size: 2.2em;
+  margin-bottom:0;
+}
+
+#missions-list h3.mission-title {
+  color:var(--title-color);
+  font-family: var(--title);
+  font-size: 3.2em;
+  margin-bottom:0;
+}
+
+#missions-list .mission-description {
+  margin-bottom:5px;
+  font-size: 2.2em;
+}
+
+
+
+
+
+
+
+a{
+  text-decoration:none;
+}
+
+.mission-infos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding:0;
+}
+
+.campaign-badge {
+  font-family: 'Verdana';
+  color: var(--campaign);
+  font-size: 1.2em;
+  margin:0;
+  padding:4px;
+  display:inline-block;
+  justify-content: center;
+}
+
+.mission-badges {
+  display:inline-block;
+  font-weight: 300;
+}
+
+.infos {
+  display: inline-block;
+}
+
+.mission-infos {
+  margin-left: 3px;
+  margin-right: 3px;
+  font-family: 'Verdana';
+  font-size: 1.4em;
+}
+
+.required-boxes {
+  text-align: center;
+  font-family: 'Verdana';
+   font-size:1.3em;
+   color: var(--mid-grey);
+   margin-top:5px;
+   margin-bottom:10px;
+}
+
+.bg-dark {
+  background-color: var(--dark-grey)!important;
+}
+
+.mission-description {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.8em;
+  color: var(--mid-grey);
+}
+
+/*
+  ***** FANCYBOX *****
+*/
+.fancybox__caption {
+  font-family: var(--title);
+  font-size:2.5em;
+  color:var(--title-color);
+}
+
+.fancybox__thumb::after {
+  border-color: var(--fancybox-accent-color, rgba(255, 171, 26, 0.96))!important;
+}
+
+.fancybox__caption a{
+  color: var(--red);
+}

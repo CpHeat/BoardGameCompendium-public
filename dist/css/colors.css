@@ -1,0 +1,12 @@
+/* #region Modals */
+:root {
+    --modal-background: #1e1e1e;
+    --modal-icon: #aaa;
+    --modal-text: #fff;
+    --modal-button: #333333;
+    --modal-button-hover: #252525;
+    --modal-button-active: #222222;
+    --modal-button-shadow: rgba(0, 0, 0, .25);
+    --modal-button-shadow-hover: rgba(22, 22, 22, .3);
+  }
+/* #endregion Modals */

@@ -1,0 +1,92 @@
+.main-div {
+  margin-top:20px;
+  padding:0;
+}
+ .sub-div {
+  text-align:center;
+  margin-bottom:4px;
+ }
+
+/*
+***** CAROUSEL *****
+*/
+
+ #games_carousel {
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;  
+}
+
+.carousel-indicators {
+  margin-bottom:0;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  opacity:0.7;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  opacity:1;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  border-radius: 5px;
+  }
+
+.carousel-caption-title {
+  font-family: var(--title);
+  font-size: 2.8em;
+}
+
+.carousel-caption-text {
+  font-family: var(--accentuated);
+  font-size: 2.2em;
+}
+
+.carousel-img {
+  opacity: 0.6;
+}
+/*
+**********
+*/
+
+.game-links {
+  text-align:center;
+  margin-left:0.5vw;
+  margin-right:0.5vw;
+  padding:0;
+}
+
+.logo {
+    max-width:100%;
+    max-height: 15vh;
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+.category {
+  max-width:100%;
+  max-height: 12vh;
+  display:inline-block;
+  margin:auto;
+  padding:0;
+}

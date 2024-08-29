@@ -1,0 +1,946 @@
+@font-face {
+    font-family: "Geogrotesque Stencil Bold";
+    src: local("Geogrotesque Stencil Bold"), url("../assets/pdf/undaunted/GeogrotesqueStencilB-Bd.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: "American Typewriter Bold";
+    src: local("American Typewriter Bold"), url("../assets/pdf/undaunted/american-typewriter-bold.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: "American Typewriter Condensed";
+    src: local("American Typewriter Condensed"), url("../assets/pdf/undaunted/american-typewriter-condensed.ttf") format("truetype");
+    font-display: swap;
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+/* endregion FORM */
+a, a:hover{
+    color: #bf2113;
+    text-decoration: none;
+}
+a:hover{
+    opacity: 0.9;
+}
+a:active{
+    opacity:1;
+}
+h1,h3{
+    font-family:var(--title);
+}
+h1{
+    font-size: 3rem;
+}
+#form .input-group-text
+{    
+    font-family: var(--accentuated);
+    font-size: 1.2rem;
+    color:white;
+    background-color: var(--orange);
+    border:solid 1px white;
+    border-radius:2px 0 0 2px;
+}
+.form-control{
+    border: solid 1px white;
+    border-radius:0 2px 2px 0;
+}
+
+.form-control:focus{
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  outline: 0 none;
+}
+
+#form{
+    font-family: var(--accentuated);
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    opacity: 0.9;
+}
+
+#form .row{
+    padding: 0;
+}
+#form textarea{
+    resize:none;
+}
+.btn-outline-light{
+    font-family:var(--accentuated);
+    font-size:1.2rem;
+    color: #6c757d;
+}
+.btn-check{
+    font-family:var(--accentuated);
+    font-size:1.2rem;
+}
+.btn-check:active+.btn-outline-light, .btn-check:checked+.btn-outline-light, .btn-outline-light.active, .btn-outline-light:active{    
+    background-color: var(--orange);
+    color:white;
+}
+.btn-check:active+.btn-outline-light.fr, .btn-check:checked+.btn-outline-light.fr{
+    background-position: center;
+    background-size: cover;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Voile noir semi-opaque */
+      url("../assets/icons/fr.webp");
+    background-color: black;
+}
+.btn-check:active+.btn-outline-light.es, .btn-check:checked+.btn-outline-light.es{
+    background-position: center;
+    background-size: cover;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Voile noir semi-opaque */
+      url("../assets/icons/es.webp");
+    background-color: black;
+}
+.btn-check:active+.btn-outline-light.en, .btn-check:checked+.btn-outline-light.en{
+    background-position: center;
+    background-size: cover;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Voile noir semi-opaque */
+      url("../assets/icons/en.webp");
+    background-color: black;
+}
+.btn-outline-light:focus, .btn-outline-light:active{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    outline: 0 none;
+}
+.btn-outline-light:hover {
+    color: white;
+    background-color: transparent;
+    border-color: #f8f9fa;
+}
+
+
+.btn-validate{
+    color:white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border: solid 1px white;
+    background-color:rgb(253, 67, 76);
+}
+.btn-check:hover+.btn-validate{
+    color: white;    
+    background-color:rgba(253, 67, 76, 0.7);
+}
+.btn-check:checked+.btn-validate:hover{
+    background-color:rgba(0, 178, 20, 0.7);
+}
+.btn-check:active+.btn-validate, .btn-check:checked+.btn-validate, .btn-validate:active, .btn-validate:checked, .btn-validate.active{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border: solid 1px white;
+    background-color: rgb(0, 178, 20);
+    color:white;
+}
+#btn-translation{
+    font-family: var(--accentuated);
+    font-size: 1.2rem;
+    border: solid 1px white;
+    border-radius: 2px 0 0 2px;
+}
+#translator{
+    border-radius:0!important;
+}
+.disabled{
+    color: var(--mid-grey)!important;
+    background-color: var(--dark-grey)!important;
+}
+.form-control:disabled {
+    background-color: var(--dark-grey);
+}
+#btn-bold{
+    border:1px solid white;
+    border-radius: 0 2px 2px 0;
+}
+.btn-submit{    
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: var(--accentuated);
+    font-size: 1.2rem;
+    background-color: var(--orange);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border: solid 2px white;
+    border-radius:5px;
+}
+.btn-submit:hover{
+    color:white;
+    background-color:var(--orange);
+    border: solid 2px var(--orange);
+}
+.btn-submit:disabled {    
+    opacity:1;
+    background-color: var(--orange);
+    border:solid 2px white;
+}
+.btn-submit:focus, .btn-submit:active{
+    color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border: solid 2px white;
+}
+.btn-submit:active{
+    border:solid 2px black;
+}
+
+.form-control:active,.form-control.active,.form-control:focus{
+    border:1px solid white;
+}
+
+
+
+.btn-us, .btn-ge{
+    font-family:var(--title);
+    font-size: 1.2rem;
+}
+.btn-check:active+.btn-ge, .btn-check:checked+.btn-ge, .btn-ge.active, .btn-ge:active{
+    background-color: #38868c;
+    color:white;
+}
+.btn-check:active+.btn-us, .btn-check:checked+.btn-us, .btn-us.active, .btn-us:active{
+    background-color: #398e65;
+    color:white;
+}
+.textarea{
+    text-align:left;
+}
+.btn-form{
+    font-family:var(--title);
+    background-color:var(--orange);
+    border:1px solid white;
+    color:white;
+}
+.form-last{
+    border-radius: 0 2px 2px 0;
+}
+#undaunted-drop-zone{
+    position: relative;
+    width:100%;
+    height:200px;
+    border: dashed 5px white;
+    border-radius: 8px;
+}
+#undaunted-drop-zone.highlight{
+    background-color:rgba(250, 166, 26, 0.9);
+    border: solid 5px white;
+}
+#undaunted-add-map{
+    width:110px;
+    height:110px;
+}
+.highlight #undaunted-add-map{
+    opacity:0.5;
+}
+#undaunted-map-input{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:200px;
+    opacity:0;
+}
+#undaunted-filename{
+    font-family: var(--accentuated);
+    font-size: 25px;
+    color: white;
+}
+.highlight #undaunted-filename{
+    color: white;
+    opacity: 0.6;
+}
+#ge-army{
+    color:#38868c;
+}
+#us-army{
+    color:#398e65;
+}
+/* HIDE RADIO */
+.army-selection { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+.army-selection + img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+.army-selection:checked + img {
+    border: none;
+    border-radius: 1.15rem;
+    box-shadow: 0 0 0 0.15rem var(--orange);
+    outline: none;
+    transition: .05s;
+}
+.col-1.icons{
+    min-width:2.4rem;
+}
+.deck-selector-h.first{
+    margin-right:0.15rem;
+}
+.deck-selector-v{    
+    margin-top:0.2rem;
+    margin-bottom:0.2rem;
+}
+.deck-selector-h.middle{
+    margin-left:0.1rem;
+    margin-right:0.1rem;
+}
+.deck-selector.last{
+    margin-left:0.1rem;
+}
+img.icon{
+    width:2rem;
+    height:2rem;
+}
+.tile{
+    min-width:4.3rem;
+}
+.undaunted-input-tile{
+    position: relative;
+    width:4rem;
+    height:4rem;
+    font-size: 2rem;
+    line-height:4rem;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+    border: 0.15rem solid white;
+    border-radius:0!important;
+    padding:0;
+}
+.undaunted-input-tile.recto:hover {
+    color: #658b8c;    
+    background-color:#f4ebe5;
+}
+.undaunted-input-tile.verso:hover {
+    color: #f4ebe5;
+    background-color:#658b8c;
+}
+.recto{
+    color: #537e7f;
+    background-color:#f4ebe5;
+}
+.verso{
+    color: #f4ebe5;
+    background-color:#537e7f;
+}
+.unused{
+    color: #537e7f;
+    background-color:#f4ebe5;
+    opacity:1;
+}
+.unused:before {
+    position: absolute;
+    top:-0.3rem;
+    left:-0.3rem;
+    padding:0;
+    margin:0;
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: black;
+    opacity:0.7;
+    width:4.3rem;
+    height:4.3rem;
+    pointer-events: none;
+  }
+
+/*************************************************************************************************************************************************************
+****************************************************************************** PDF & PREVIEW *****************************************************************
+*************************************************************************************************************************************************************/
+/*#region PDF */
+#pdf{
+    opacity:0;
+    overflow: hidden;
+    position:absolute;
+    height:0;
+    width:0;
+    top:0;
+    left:0;
+}
+/*#endRegion PDF */
+
+/*#region Page 1 */
+#undaunted-page-1, #undaunted-preview-page-1{
+    position:relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#undaunted-page-1{
+    width:1500px;
+    height:2208px;
+}
+#undaunted-page-1.en, #undaunted-preview-page-1.en{
+    background-image:url("../assets/pdf/undaunted/page_1_en.png");
+}
+#undaunted-page-1.fr, #undaunted-preview-page-1.fr{
+    background-image:url("../assets/pdf/undaunted/page_1_fr.png");
+}
+#undaunted-page-1.es, #undaunted-preview-page-1.es{
+    background-image:url("../assets/pdf/undaunted/page_1_es.png");
+}
+#undaunted-author{
+    position:absolute;
+    width:1500px;
+    height:75px;
+    top:655px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+    font-size: 75px;
+    line-height:75px;
+    color:#f4ebe5;
+}
+#undaunted-credits{
+    position:absolute;
+    width:1500px;
+    height:75px;
+    top:1765px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+    font-size: 75px;
+    line-height:75px;
+    color:#f4ebe5;
+}
+#undaunted-bgc-credits{
+    position:absolute;
+    width:1500px;
+    height:75px;
+    top:2050px;    
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+    font-size: 75px;
+    line-height:75px;
+    color:#f4ebe5;
+}
+/*#endregion Page 1 */
+
+/*#region Page 2 */
+#undaunted-page-2, #undaunted-preview-page-2{
+    position:relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+#undaunted-page-2{
+    width:1500px;
+    height:2208px;   
+}
+
+#undaunted-title{
+    position:absolute;
+    top:97px;
+    left:114px;
+    width:1276px;
+    height:62px;
+    color:#f4ebe5;
+    font-size:62px;
+    line-height:62px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+}
+#undaunted-setting{
+    display:flex;
+    align-items:center;
+    position:absolute;
+    top:212px;
+    left:150px;
+    width:562px;
+    height:70px;
+    color:#f4ebe5;
+    font-size: 30px;
+    line-height:30px;
+    letter-spacing:1px;
+    font-family: "American Typewriter Bold";
+    transform: scale(1, 1.3);
+}
+#undaunted-location-date{
+    position:absolute;
+    top:295px;
+    left:155px;
+    width:550px;
+    height:25px;
+    color:#537e7f;
+    font-size: 25px;
+    line-height:25px;
+    letter-spacing:1px;
+    font-family: "American Typewriter Bold";
+    transform: scale(1, 1.2);
+}
+#undaunted-story, #undaunted-story-no-setting{
+    position:absolute;
+    left:150px;
+    width:562px;    
+    color:#f4ebe5;
+    font-size: 24px;
+    line-height:29px;
+    letter-spacing:1px;
+    font-family: "American Typewriter Condensed";
+    transform: scale(1, 1.1);
+}
+#undaunted-story{    
+    top:360px;    
+    height:370px;
+}
+#undaunted-story-no-setting{
+    top:230px;
+    height:494px;
+}
+#undaunted-us-objective, #undaunted-ge-objective{
+    position:absolute;
+    left:998px;
+    width:351px;
+    height:109px;
+    color:black;
+    font-family: "American Typewriter Condensed";    
+    font-size:27px;
+    line-height:29px;
+    transform: scale(1, 0.9);
+}
+#undaunted-us-objective{    
+    top:325px;
+}
+#undaunted-ge-objective{
+    top:607px;
+}
+#undaunted-us-objective b, #undaunted-ge-objective b{
+    font-size:26px;
+    font-family: "American Typewriter Bold";
+}
+#undaunted-rules-title{
+    position:absolute;
+    top:1819px;
+    left:138px;
+    width:1223px;
+    height:46px;
+    color:#f4ebe5;
+    font-size:46px;
+    line-height:46px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+}
+#undaunted-rules-no-title,#undaunted-rules{
+    position:absolute;
+    left:138px;
+    width:1221px;
+    color:#f4ebe5;
+    font-family: "American Typewriter Condensed";    
+    font-size:28px;
+    line-height:38px;
+}
+#undaunted-rules-no-title{    
+    top:1812px;
+    height:296px;
+}
+#undaunted-rules{
+    top:1872px;
+    height:238px;
+}
+#undaunted-rules b, #undaunted-rules-no-title b{
+    font-family: "American Typewriter Bold";    
+    font-size:28px;
+    font-weight:100;
+    letter-spacing: 1px;
+}
+.undaunted-deck{
+    margin-left:1px;
+    margin-right:1px;
+    width:30px;
+    height:30px;
+}
+#undaunted_sergeant_us,#undaunted_guide_us,#undaunted_leader_a_us,#undaunted_leader_b_us,#undaunted_leader_c_us,#undaunted_rifleman_a_us,#undaunted_rifleman_b_us,#undaunted_rifleman_c_us,#undaunted_scout_a_us,#undaunted_scout_b_us,#undaunted_scout_c_us,#undaunted_gunner_a_us,#undaunted_gunner_b_us,#undaunted_gunner_c_us,#undaunted_mortar_us,#undaunted_sniper_us,#undaunted_fog_us{
+    position:absolute;
+    left:426px;
+    width:316px;
+    height:30px;
+    text-align:center;
+}
+#undaunted_sergeant_ge,#undaunted_guide_ge,#undaunted_leader_a_ge,#undaunted_leader_b_ge,#undaunted_leader_c_ge,#undaunted_rifleman_a_ge,#undaunted_rifleman_b_ge,#undaunted_rifleman_c_ge,#undaunted_scout_a_ge,#undaunted_scout_b_ge,#undaunted_scout_c_ge,#undaunted_gunner_a_ge,#undaunted_gunner_b_ge,#undaunted_gunner_c_ge,#undaunted_mortar_ge,#undaunted_sniper_ge,#undaunted_fog_ge{
+    position:absolute;
+    left:766px;
+    width:311px;
+    height:30px;
+    text-align:center;
+}
+#undaunted_sergeant_us,#undaunted_sergeant_ge{
+    top:983px;    
+}
+#undaunted_guide_us,#undaunted_guide_ge{
+    top:1023px;
+}
+#undaunted_leader_a_us,#undaunted_leader_a_ge{
+    top:1064px;
+}
+#undaunted_leader_b_us,#undaunted_leader_b_ge{
+    top:1105px;
+}
+#undaunted_leader_c_us,#undaunted_leader_c_ge{
+    top:1146px;
+}
+#undaunted_rifleman_a_us,#undaunted_rifleman_a_ge{
+    top:1186px;
+}
+#undaunted_rifleman_b_us,#undaunted_rifleman_b_ge{
+    top:1227px;
+}
+#undaunted_rifleman_c_us,#undaunted_rifleman_c_ge{
+    top: 1267px;
+}
+#undaunted_scout_a_us,#undaunted_scout_a_ge{
+    top:1307px;
+}
+#undaunted_scout_b_us,#undaunted_scout_b_ge{
+    top:1348px;
+}
+#undaunted_scout_c_us,#undaunted_scout_c_ge{
+    top:1389px;
+}
+#undaunted_gunner_a_us,#undaunted_gunner_a_ge{
+    top:1429px;
+}
+#undaunted_gunner_b_us,#undaunted_gunner_b_ge{
+    top:1469px;
+}
+#undaunted_gunner_c_us,#undaunted_gunner_c_ge{
+    top:1510px;
+}
+#undaunted_mortar_us,#undaunted_mortar_ge{
+    top:1551px;
+}
+#undaunted_sniper_us,#undaunted_sniper_ge{
+    top:1592px;
+}
+#undaunted_fog_us,#undaunted_fog_ge{
+    top:1637px;
+}
+.setting-rules-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_all_cards_ge_en.png");
+}
+.setting-rules-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_all_cards_us_en.png");
+}
+.setting-rules-not-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_not_all_cards_ge_en.png");
+}
+.setting-rules-not-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_not_all_cards_us_en.png");
+}
+.setting-no-rules-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_all_cards_ge_en.png");
+}
+.setting-no-rules-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_all_cards_us_en.png");
+}
+.setting-no-rules-not-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_not_all_cards_ge_en.png");
+}
+.setting-no-rules-not-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_not_all_cards_us_en.png");
+}
+.no-setting-rules-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_all_cards_ge_en.png");
+}
+.no-setting-rules-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_all_cards_us_en.png");
+}
+.no-setting-rules-not-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_not_all_cards_ge_en.png");
+}
+.no-setting-rules-not-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_not_all_cards_us_en.png");
+}
+.no-setting-no-rules-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_all_cards_ge_en.png");
+}
+.no-setting-no-rules-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_all_cards_us_en.png");
+}
+.no-setting-no-rules-not-all-cards-ge-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_not_all_cards_ge_en.png");
+}
+.no-setting-no-rules-not-all-cards-us-en{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_not_all_cards_us_en.png");
+}
+.setting-rules-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_all_cards_ge_fr.png");
+}
+.setting-rules-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_all_cards_us_fr.png");
+}
+.setting-rules-not-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_not_all_cards_ge_fr.png");
+}
+.setting-rules-not-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_not_all_cards_us_fr.png");
+}
+.setting-no-rules-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_all_cards_ge_fr.png");
+}
+.setting-no-rules-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_all_cards_us_fr.png");
+}
+.setting-no-rules-not-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_not_all_cards_ge_fr.png");
+}
+.setting-no-rules-not-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_not_all_cards_us_fr.png");
+}
+.no-setting-rules-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_all_cards_ge_fr.png");
+}
+.no-setting-rules-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_all_cards_us_fr.png");
+}
+.no-setting-rules-not-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_not_all_cards_ge_fr.png");
+}
+.no-setting-rules-not-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_not_all_cards_us_fr.png");
+}
+.no-setting-no-rules-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_all_cards_ge_fr.png");
+}
+.no-setting-no-rules-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_all_cards_us_fr.png");
+}
+.no-setting-no-rules-not-all-cards-ge-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_not_all_cards_ge_fr.png");
+}
+.no-setting-no-rules-not-all-cards-us-fr{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_not_all_cards_us_fr.png");
+}
+.setting-rules-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_all_cards_ge_es.png");
+}
+.setting-rules-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_all_cards_us_es.png");
+}
+.setting-rules-not-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_not_all_cards_ge_es.png");
+}
+.setting-rules-not-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_rules_not_all_cards_us_es.png");
+}
+.setting-no-rules-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_all_cards_ge_es.png");
+}
+.setting-no-rules-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_all_cards_us_es.png");
+}
+.setting-no-rules-not-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_not_all_cards_ge_es.png");
+}
+.setting-no-rules-not-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_setting_no_rules_not_all_cards_us_es.png");
+}
+.no-setting-rules-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_all_cards_ge_es.png");
+}
+.no-setting-rules-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_all_cards_us_es.png");
+}
+.no-setting-rules-not-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_not_all_cards_ge_es.png");
+}
+.no-setting-rules-not-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_rules_not_all_cards_us_es.png");
+}
+.no-setting-no-rules-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_all_cards_ge_es.png");
+}
+.no-setting-no-rules-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_all_cards_us_es.png");
+}
+.no-setting-no-rules-not-all-cards-ge-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_not_all_cards_ge_es.png");
+}
+.no-setting-no-rules-not-all-cards-us-es{
+    background-image:url("../assets/pdf/undaunted/page_2_no_setting_no_rules_not_all_cards_us_es.png");
+}
+/*#endregion Page 2 */
+
+/*#region Page 3 */
+#undaunted-page-3, #undaunted-preview-page-3{
+    position:relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image:url("../assets/pdf/undaunted/page_3.png");
+}
+#undaunted-page-3{
+    width:1500px;
+    height:2208px;
+}
+#undaunted-map-title{
+    position: absolute;
+    width:1280px;
+    height:67px;
+    top: 91px;
+    left: 110px;
+    color:#f4ebe5;
+    font-size:62px;
+    line-height:67px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+}
+#undaunted-map{
+    position: absolute;
+    width:1280px;
+    height:1629px;
+    top: 194px;
+    left: 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#undaunted-tiles-title{
+    position: absolute;
+    width:1236px;
+    height:67px;
+    top: 1884px;
+    left: 132px;
+    color:#f4ebe5;
+    font-size:46px;
+    line-height:67px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+}
+#undaunted-tile-1,#undaunted-tile-2,#undaunted-tile-3,#undaunted-tile-4,#undaunted-tile-5,#undaunted-tile-6,#undaunted-tile-7,#undaunted-tile-8,#undaunted-tile-9,#undaunted-tile-10,
+#undaunted-tile-11,#undaunted-tile-12,#undaunted-tile-13,#undaunted-tile-14,#undaunted-tile-15,#undaunted-tile-16,#undaunted-tile-17,#undaunted-tile-18{
+    position:absolute;
+    width:62px;
+    height:62px;
+    top:2000px;
+    color: #537e7f;
+    font-size: 28px;
+    line-height: 62px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align: center;
+}
+#undaunted-tile-1{
+    left:137px;
+}
+#undaunted-tile-2{
+    left:206px;
+}
+#undaunted-tile-3{
+    left:274px;
+}
+#undaunted-tile-4{
+    left:342px;
+}
+#undaunted-tile-5{
+    left:411px;
+}
+#undaunted-tile-6{
+    left:480px;
+}
+#undaunted-tile-7{
+    left:548px;
+}
+#undaunted-tile-8{
+    left:616px;
+}
+#undaunted-tile-9{
+    left:685px;
+}
+#undaunted-tile-10{
+    left:753px;
+}
+#undaunted-tile-11{
+    left:822px;
+}
+#undaunted-tile-12{
+    left:891px;
+}
+#undaunted-tile-13{
+    left:958px;
+}
+#undaunted-tile-14{
+    left:1027px;
+}
+#undaunted-tile-15{
+    left:1096px;
+}
+#undaunted-tile-16{
+    left:1164px;
+}
+#undaunted-tile-17{
+    left:1233px;
+}
+#undaunted-tile-18{
+    left: 1301px;
+}
+/*#endregion Page 3 */
+
+/*#region Page 4 */
+#undaunted-page-4, #undaunted-preview-page-4{
+    position:relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image:url("../assets/pdf/undaunted/page_4.png");
+}
+#undaunted-page-4{
+    width:1500px;
+    height:2208px;
+}
+#undaunted-additional-rules-title,#undaunted-additional-rules,#undaunted-additional-rules-no-title{
+    position:absolute;    
+    color:#f4ebe5;
+    overflow-wrap: break-word;
+    hyphens:auto;
+}
+#undaunted-additional-rules,#undaunted-additional-rules-no-title{
+    left: 94px;    
+    width: 1311px;    
+    font-family: "American Typewriter Condensed";
+    font-size:35px;
+    line-height:45px;
+    text-align:left;
+}
+#undaunted-additional-rules b,#undaunted-additional-rules-no-title b{    
+    font-family: "American Typewriter Bold";
+    font-size:35px;
+    font-weight:100;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    hyphens:auto;
+}
+#undaunted-additional-rules-title{    
+    top: 70px;
+    left: 117px;
+    width: 1268px;
+    height: 55px;
+    font-size:55px;
+    line-height:55px;
+    font-family: "Geogrotesque Stencil Bold";
+    text-align:center;
+}
+#undaunted-additional-rules{
+    top: 130px;
+    height: 1955px;
+}
+#undaunted-additional-rules-no-title{
+    top: 85px;
+    height: 2002px;
+}
+/*#endregion Page 4 */
+
+/*#region Page 5 */
+#undaunted-page-5{
+    width:1500px;
+    height:2208px;
+    position:relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image:url("../assets/pdf/undaunted/page_5.png");
+}
+/*#endregion Page 5 */

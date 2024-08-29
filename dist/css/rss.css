@@ -1,0 +1,117 @@
+/* #region */
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image {
+    margin:0;
+    padding:0;
+    border: 2px solid white;
+}
+.update-container{
+    position:relative;
+    width:100%;
+    height:15%;
+}
+.update-background-fr, .update-background-en{
+    position:absolute;
+    padding: 5px 3px 5px 3px;
+    width:100%;
+    opacity: 0;
+    background-color:var(--orange);
+    font-family: 'Verdana';
+    color:rgba(255, 255, 255, 0);
+    font-size:1.1vw;
+}
+.update-time-fr, .update-time-en{    
+    color:rgba(255, 255, 255, 0);
+    transition: color 0.2s ease-in-out;
+}
+.update-fr, .update-en{
+    position:absolute;
+    padding: 5px 3px 5px 3px;
+    width:100%;
+    opacity:0;
+    font-family: 'Verdana';
+    color:white;
+    font-size:1.1vw;
+}
+
+.rss-infos{
+    height:100%;
+}
+
+.lang-choice{
+    padding:0;
+    margin:0;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.65);    
+    max-height:15%;
+}
+.lang-choice .row{
+    padding:0;
+    margin:0;
+    max-height:100%;
+    width:100%;
+}
+.lang-left, .lang-right{
+    max-width:50%;
+    max-height:100%;
+    border-top:white solid 2px;
+}
+
+.lang-left{
+    border-right:white solid 1px;
+}
+
+.lang-right{
+    border-left:white solid 1px;
+}
+.flag-en, .flag-fr{
+    max-height:100%;
+    max-width:50%;
+}
+
+.lang-left:hover .flag-en, .lang-right:hover .flag-fr{
+    opacity:0.8;
+}
+.items-container{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.items-en, .items-fr{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title);
+    font-size:1.8vw;
+    color:white;
+}
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: 2px solid white;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+
+/* #endregion */
