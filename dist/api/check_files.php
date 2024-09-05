@@ -12,7 +12,7 @@
 
     try
     {
-    	$bdd = new PDO("mysql:host=localhost;dbname=".$GLOBALS['db'].";charset=utf8", $GLOBALS['db_user'], $GLOBALS['db_pass']);
+    	$bdd = new PDO("mysql:host=".$GLOBALS['db_host'].";dbname=".$GLOBALS['db'].";charset=utf8", $GLOBALS['db_user'], $GLOBALS['db_pass']);
     }
     catch(Exception $e)
     {
